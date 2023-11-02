@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <title><%= blogPost.title %></title>
+    <style>
+        body {
+            font-family: 'Your Font', sans-serif;
+            background-image: url("https://images.unsplash.com/photo-1542435503-956c469947f6?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8YmxoZ3xlbnwwfHwwfHx8MA%3D%3D");
+            background-size: cover;
+            background-position: center;
+            color: black;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .add-blog-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        p {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1><%= blogPost.title %></h1>
+<p><%= blogPost.publishedDate %></p>
+<p><%= blogPost.content %></p>
+<a href="/blog">Back to Home</a>
+</body>
+</html>

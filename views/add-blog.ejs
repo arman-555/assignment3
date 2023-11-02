@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+    <title>Add a New Blog Post</title>
+    <style>
+        body {
+            font-family: 'Your Font', sans-serif;
+            background-image: url("https://images.unsplash.com/photo-1625225230517-7426c1be750c?auto=format&fit=crop&q=80&w=1000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGZvcm18ZW58MHx8MHx8fDA%3D");
+            background-size: cover;
+            background-position: center;
+            color: black;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        .add-blog-button {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+<h1>Add a New Blog Post</h1>
+<form method="POST" action="/blog/add">
+    <label for="title">Title:</label>
+    <input type="text" id="title" name="title" required>
+
+    <label for="content">Content:</label>
+    <textarea id="content" name="content" rows="4" required></textarea>
+
+    <label for="publishedDate">Published Date (YYYY-MM-DD):</label>
+    <input type="text" id="publishedDate" name="publishedDate" required>
+
+    <button class="add-blog-button" type="submit">Submit</button>
+</form>
+</body>
+</html>
